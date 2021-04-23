@@ -38,7 +38,7 @@ class TransferFile implements Task
      */
     public function execute()
     {
-        $this->destinationFilesystem->updateStream(
+        $this->destinationFilesystem->putStream(
             $this->destinationPath,
             $this->sourceFilesystem->readStream($this->sourcePath)
         );
